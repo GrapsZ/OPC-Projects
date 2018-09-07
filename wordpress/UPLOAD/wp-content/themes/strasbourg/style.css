@@ -1,0 +1,393 @@
+/*
+Theme Name: Strasbourg
+Description: Theme Strasbourg de Michael OpenClassRooms
+Author: Michael - OpenClassRooms
+Author URI: https://wordpress.mthaize.fr
+Template: customizr-pro
+Version: 1.1.0
+*/
+
+
+/* GENERAL */
+
+body {
+    font-family: "Roboto", sans-serif;
+    /*min-width: 300px; */
+}
+
+a {
+    color: #5CADD3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3d8fd3;
+    text-decoration: none;
+}
+
+/* MENU FIXED */
+
+.branding .navbar-brand-sitename.czr-underline span {
+    position: relative;
+    padding-bottom: .25em;
+    margin-bottom: 5px;
+    color: #3A3A3A;
+    text-transform: uppercase; /* Force le texte en majuscules */
+    font-size: 24px;
+}
+
+/* SLIDER */
+
+.czr-carousel-nav .czr-carousel-control, .mfp-gallery .czr-carousel-control {
+    position: absolute;
+    z-index: 9;
+    top: calc((100% - 60px)/ 2);
+    text-align: center;
+    padding: 0;
+    display: block;
+    height: 60px;
+    width: 50px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: width .3s cubic-bezier(.39,.575,.565,1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    line-height: 60px;
+    border: none;
+}
+
+.btn-skin-dark-shaded.inverted {
+    background-color: rgba(92,173,211,.2);
+}
+
+.btn-skin-dark-shaded.inverted:active, .btn-skin-dark-shaded.inverted:focus, .btn-skin-dark-shaded.inverted:hover {
+    background-color: rgba(92,173,211,.8);
+}
+
+/* ACCUEIL */
+
+.strasbourg-word {
+    color: white;
+}
+
+.accueil-visiteurs {
+	background-color: rgba(92, 173, 211, 0.6);
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 2px;
+	margin-bottom: 5%;
+    margin-top: 5%;
+	box-shadow: 3px 4px 5px black;
+  	-moz-box-shadow:3px 4px 5px black;     
+  	-webkit-box-shadow:3px 4px 5px black;
+}
+
+.accueil-visiteurs p, h3 {
+	color: black;
+	font-weight: 600;
+}
+
+.accueil-actus {
+	box-shadow: 1px 1px 6px #555 ;
+ 	-moz-box-shadow:1px 1px 6px #555 ;
+ 	-webkit-box-shadow:1px 1px 6px #555 ;
+}
+
+.accueil-actus:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: rgba(255, 250, 240, 1.0);
+    color: black;
+    box-shadow: 2px 2px 8px #555 ;
+    -moz-box-shadow:2px 2px 8px #555 ;
+    -webkit-box-shadow:2px 2px 8px #555 ;
+}
+
+/*IMAGES DE LA PAGE PRINCIPALE */
+
+.fpc-row-fluid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: rgba(255, 250, 240, 0.7);
+    border: 1px black solid;
+}
+
+/* Fond gris derrière les élements principaux */
+.container[role=main] {
+    background-color: rgba(255, 250, 240, 0.7);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px black solid;
+    -moz-box-shadow: 5px 5px 5px 0px #656565;
+    -webkit-box-shadow: 5px 5px 5px 0px #656565;
+    -o-box-shadow: 5px 5px 5px 0px #656565;
+    box-shadow: 5px 5px 5px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*/ ARTICLES /*/
+
+.tc-grid-hover-move .grid__item {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -ms-transform .1s ease-in-out;
+    transition: -webkit-transform .1s ease-in-out;
+    transition: transform .1s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(235, 235, 235, 0.6);
+    border: 2px solid black;
+}
+
+/* Pas de retour à la page précédente */
+
+.post-navigation .czr_pager>li {
+    display: none;
+}
+
+#home-image {
+    width: 550px;
+    height: 287px;
+}
+
+.header-skin-light .navbar-brand-sitename {
+	color: #5CADD3;
+}
+
+/* Le titre est la barre en dessous */
+.czr-link-hover-underline [class*=nav__menu] .nav__title {
+    position: relative;
+    color: #3A3A3A;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+/* Barres sous les liens dans le menu */
+
+.header-skin-light [class*=nav__menu] .nav__title::before {
+    background-color: #5CADD3;
+}
+
+.tc-header.border-top {
+    border-top-color: #5CADD3;
+}
+
+.branding .czr-underline span::after {  /* Barre sous le titre */
+    content: "";
+    position: absolute;
+    width: 33%;
+    border-bottom: 3px solid;
+    color: #5CADD3;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* CORPS DU SITE */
+
+/* Barre en page d'accueil sous le bloc de 3 liens / images */
+.fpc-marketing .fpc-widget-front .fp-title::after {
+    background-color: #5CADD3 !important;
+}
+
+/* marge sous les 3 images */
+
+.fpc-container[data-bgcolor="#fafafa"] {
+    margin-bottom: 2%;
+}
+
+.container[role=main] {
+   /* margin-top: 0; */
+    margin: 5px auto;
+}
+
+/* Activités du mois - tableau */
+@media (max-width: 759px) and (orientation: portrait) {
+         
+     #carte {
+         height: 25em;
+         width: 90%;
+         margin: auto;
+     }
+     
+     #details {
+        margin: 5em auto 0 auto;
+         padding-bottom: 2%;
+     }
+     
+     #details h3 {
+         text-align: center;
+     }
+        
+}
+
+@media screen and (max-width: 759px){
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+table:not([id^=wp-calendar]):not(.ui-datepicker-calendar) td {
+    color: black;
+    border: 1px solid black;
+    margin: 0px 5px;
+}
+
+table:not([id^=wp-calendar]):not(.ui-datepicker-calendar) th {
+    border: 1px solid black;
+}
+
+table:not([id^=wp-calendar]):not(.ui-datepicker-calendar) {
+    border: none;
+}
+
+.titre-activity {
+	background-color: rgba(92, 173, 211, 0.6);
+	color: black;
+}
+
+.activity-pair:hover {
+	background-color: rgba(244, 184, 48, 0.3);
+}
+
+.activity-impair {
+	/*background-color: rgba(92, 173, 211, 0.3);*/
+	background-color: rgba(220, 220, 220, 0.5);
+}
+
+.activity-impair:hover {
+	background-color: rgba(244, 184, 48, 0.3);
+}
+
+.btn-skin-dark, .woocommerce a.button.alt.disabled, .woocommerce a.button[class*=alt], .woocommerce button.button.alt.disabled, .woocommerce button.button[class*=alt], .woocommerce input#submit.alt.disabled, .woocommerce input#submit[class*=alt], .woocommerce input.button.alt.disabled, .woocommerce input.button[class*=alt], button[type=submit], input[type=submit] {
+    background-color: #5CADD3;
+    color: #fff;
+    border-color: #3b3b3b;
+}
+/* Activités page - fin */
+
+
+/* Contact */
+
+input[type=checkbox], input[type=radio] {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    padding: .5em;
+    text-align: center;
+    line-height: normal;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+
+.fond-gris {
+	background-color: rgba(244, 184, 48, 0.8);
+}
+
+/* FOOTER */
+
+.footer-skin-dark .footer__wrapper a { /* Couleur du lien sans hover */
+    color: #5CADD3;
+}
+
+.footer-skin-dark .footer__wrapper a:hover { /* Couleur du lien avec hover */
+    color: #3d8fd3;
+}
