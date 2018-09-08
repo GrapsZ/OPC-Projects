@@ -1,0 +1,251 @@
+@media all and (max-width: 1024px) and (min-width: 768px)
+{
+    body {
+        width: 100%;
+    }
+    /* propriétés CSS tablette */
+    .menu {
+        display: none;
+    }
+
+    #portfolio {
+        width: 100%;
+    }
+
+    #conteneur-portfolio-images {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+
+    .test {
+        width: calc(75% * (1/2));
+        margin: 10px;
+    }
+
+    #conteneur-portfolio-images img {
+        width: 75%;
+    }
+
+    #conteneur-portfolio-images > div .p-portfolio {
+        /* display: none; */
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 46px;
+        width: 75%;
+        margin-bottom: 0;
+        height: 0;
+        transition: height 0.1s;
+    }
+
+    #portfolio #conteneur-portfolio-images div:hover .p-portfolio {
+        /* display: block; */
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 75%;
+        left: 46px;
+        /*height: 50px;*/
+        overflow: visible;
+        transition: height 0.3s;
+    }
+
+    .p-portfolio h3 {
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 5px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .p-portfolio p {
+        text-align: left;
+        padding-left: 5px;
+        font-size: 12px;
+        margin: 0 0 10px 0;
+        font-weight: 400;
+    }
+
+    .fa-eye {
+        position: absolute;
+        z-index: 3;
+        top: -13px;
+        right: 10px;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #5CADD3;
+        border: 1px solid white;
+    }
+
+    #ma-belle-map {
+        width: 100%;
+    }
+
+    #contact-form {
+        width: 40%;
+        right: 10%;
+    }
+
+    .fa-align-justify {
+        color: #5CADD3;
+        font-size: 30px;
+    }
+
+    #sm-menu {
+        display: inline-block;
+        position: relative;
+        top: 33px;
+        right: -256px;
+        z-index: 2;
+    }
+
+    #slide-smartphone {
+        display: none;
+    }
+
+    #slide #text {
+        position: absolute;
+        font-weight: 500;
+        color: white;
+        width: 30%;
+        left: 100px;
+        top: 35%;
+    }
+
+    #text h1 {
+        text-transform: uppercase; /* Force le texte en majuscules */
+        font-weight: 800;
+        font-size: 18px;
+        left: 0;
+        text-align: left;
+    }
+
+    #text p {
+        display: none;
+    }
+
+    #text #infos {
+        padding: 10px;
+        font-size: 12px;
+        color: white;
+        background-color: #5CADD3;
+        border-bottom: 2px solid #3d8fd3;
+    }
+
+    #text #infos:hover {
+        border-bottom: 2px solid #5CADD3;
+        border-left: #3d8fd3;
+        border-right: #3d8fd3;
+        border-top: #3d8fd3;
+    }
+
+    #sm-menu .open {
+        height: 80px;
+        position: absolute;
+        top: 35px;
+        margin: 0;
+        padding: 20px 40px;
+        right: 0;
+        background-color: white;
+        color: transparent;
+        border: 1px solid grey;
+        transition: height 0.8s;
+    }
+
+    #sm-menu ul {
+        border-radius: 1px;
+        list-style-type: none;
+        text-align: right;
+        color: white;
+        overflow: hidden;
+        height: 0;
+    }
+
+    #diaporama {
+        width: 100%;
+        height: 275px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    #diapos {
+        width: calc(100% * 2);
+        animation: glisse 20s infinite;
+    }
+
+    .diapos-img {
+        float: left;
+    }
+
+    .img1 {
+        background-image: url("../images/slider/bg1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 275px;
+    }
+
+    .img2 {
+        background-image: url("../images/slider/bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 275px;
+    }
+
+    @keyframes glisse {
+        0% {
+            transform: translate(0); /* Départ de mon slide */
+        }
+        25% {
+            transform: translate(0); /* Départ de mon slide */
+        }
+        50% {
+            transform: translate(-50%); /* Passage à la seconde image */
+        }
+        75% {
+            transform: translate(-50%); /* Passage à la seconde image */
+        }
+        100% {
+            transform: translate(0); /* Retour premiere image */
+        }
+    }
+
+    #slide > div #slider-transition {
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        height: 6px;
+        width: 5%;
+        background-color: #5CADD3;
+        animation-name: slide-barre;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        border-radius: 10px;
+
+    }
+
+    #slide > div { /* Le signe > me sert à donner les modifications uniquement dans la première balise <div> en dessous et pas les autres */
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #slide .fa-angle-left {
+        left: 2px;
+        top: calc(52% - 1px);
+    }
+
+    #slide .fa-angle-right {
+        right: 2px;
+        top: calc(52% - 1px);
+    }
+
+    #accueil nav {
+        height: 79px;
+        z-index: 300;
+    }
+}

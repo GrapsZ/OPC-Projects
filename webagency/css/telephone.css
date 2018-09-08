@@ -1,0 +1,212 @@
+@media all and (max-width: 768px)
+{
+
+    /* propriétés CSS téléphone */
+    .menu {
+        display: none;
+    }
+
+    #logo{
+        width: auto;
+        position: fixed;
+        left: 3%;
+        top: 5px;
+        height: 50px;
+    }
+
+    #portfolio {
+        width: 100%;
+    }
+
+
+    #conteneur-portfolio ul {
+        display: flex; /* Flexbox en ligne */
+        list-style-type: none; /* pas de point de liste */
+        justify-content: center; /* centrer les élements de flexbox */
+        margin-top: 35px;
+        padding: 0;
+    }
+
+    #conteneur-portfolio-images {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+
+    .test {
+        width: calc(100% * (1/2));
+        margin: 5px;
+    }
+
+    #conteneur-portfolio-images img {
+        width: 100%;
+    }
+
+    #conteneur-portfolio-images > div .p-portfolio {
+        /* display: none; */
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 0;
+        height: 0;
+        transition: height 0.2s;
+    }
+
+    #portfolio #conteneur-portfolio-images div:hover .p-portfolio {
+        /* display: block; */
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 100%;
+        height: 50px;
+        overflow: visible;
+        transition: height 0.3s;
+    }
+
+    .p-portfolio h3 {
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 5px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .p-portfolio p {
+        text-align: left;
+        padding-left: 5px;
+        font-size: 12px;
+        margin: 0 0 10px 0;
+        font-weight: 400;
+    }
+
+    .fa-eye {
+        position: absolute;
+        z-index: 3;
+        top: -13px;
+        right: 10px;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #5CADD3;
+        border: 1px solid white;
+    }
+
+    #ma-belle-map {
+        width: 100%;
+    }
+
+    #ma-belle-map img {
+        display: none;
+    }
+
+    #contact-form {
+        width: 40%;
+        right: 10%;
+    }
+
+    .fa-align-justify {
+        color: #5CADD3;
+        font-size: 30px;
+    }
+
+    #sm-menu {
+        display: inline-block;
+        position: relative;
+        top: 33px;
+        right: -136px;
+        z-index: 2;
+    }
+
+    #slide {
+        display: none;
+    }
+
+    #slide-smartphone {
+        display: block;
+    }
+
+    #slide-smartphone > div {
+        position: relative;
+        margin: 15% 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    #slide-smartphone #text-smartphone {
+        position: absolute;
+        font-weight: 500;
+        color: white;
+        width: 70%;
+        left: 75px;
+        top: 30%;
+        z-index: 1;
+        text-align: left;
+        text-shadow: 2px 2px 2px black, -2px -2px 2px white;
+    }
+
+    #slide-smartphone #text-smartphone #webagency-smartphone {
+        color: #5CADD3;
+    }
+
+    #sm-menu .open {
+        height: 80px;
+        position: absolute;
+        top: 35px;
+        margin: 0;
+        padding: 20px 40px;
+        right: 0;
+        background-color: white;
+        color: transparent;
+        border: 1px solid grey;
+        transition: height 0.8s;
+    }
+
+    #sm-menu ul {
+        border-radius: 1px;
+        list-style-type: none;
+        text-align: right;
+        color: white;
+        overflow: hidden;
+        height: 0;
+    }
+
+    #slide .fa-angle-left {
+        left: 2px;
+        top: calc(52% - 2px);
+    }
+
+    #slide .fa-angle-right {
+        right: 2px;
+        top: calc(52% - 2px);
+    }
+
+    #accueil nav {
+        width: 100%;
+        height: 79px;
+        z-index: 300;
+    }
+
+    section > header {
+        width: 100%;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    /* FORMULAIRE CONTACT */
+    #contact-form {
+        width: 60%;
+        right: 10%;
+    }
+
+    /* Bouton formuilaire de contact */
+    #contact-form input[type="submit"] {
+        width: 60%;
+        height: 50px;
+        text-align: center;
+        margin-right: 50%;
+        opacity: 1;
+    }
+}
