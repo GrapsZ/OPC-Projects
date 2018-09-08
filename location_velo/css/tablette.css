@@ -1,0 +1,295 @@
+@media (min-width: 760px) and (max-width: 899px) and (orientation: portrait) {
+
+    #mockup {
+        height: 25em;
+    }
+
+    #carte {
+        height: 25em;
+        width: 80%;
+        margin: auto;
+    }
+
+    #details {
+        width: 80%;
+        margin: 5em auto 0 auto;
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+
+    #details h3 {
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 760px) and (max-width: 899px) and (orientation: landscape) {
+    #mockup {
+        height: 40em;
+    }
+
+    #carte {
+        height: 40em;
+        width: 50%;
+    }
+    #details {
+        width: 33%;
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 899px) {
+
+
+    /* GENERAL */
+
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    i {
+        color: rgba(91,174,209,0.7);
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1em;
+    }
+
+    .bleu {
+        color: rgb(91,174,209);
+    }
+
+    #canvas {
+        position: relative;
+        border: 2px solid black;
+        display: block;
+        margin: 1em 0;
+    }
+
+    #signature {
+        display: none;
+    }
+
+    #erreur-signature {
+        display: none;
+        color: red;
+        font-weight: 800;
+    }
+
+    /* MOCKUP */
+
+    #mockup {
+        position: relative;
+        background-color: gray;
+    }
+
+    #mockup i {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+    }
+
+    #mockup i:hover {
+        color: rgba(91,174,209,1);
+    }
+
+    #precMockup {
+        top: 45%;
+    }
+
+    #suivMockup {
+        right: 0;
+        top: 45%;
+    }
+
+    #mockup-images {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #texteMockup1 {
+        width: 25%;
+        position: relative;
+        top: 40%;
+        left: 63%;
+        text-shadow: 3px 6px 5px rgba(0,0,0,0.3);
+    }
+
+    #texteMockup2 {
+        text-align: left;
+        width: 25%;
+        position: relative;
+        top: 20%;
+        left: 12%;
+        text-shadow: 3px 6px 5px rgba(0,0,0,0.3);
+    }
+
+    #texteMockup3 {
+        width: 25%;
+        position: relative;
+        top: 30%;
+        left: 63%;
+        text-shadow: 3px 6px 5px rgba(0,0,0,0.3);
+    }
+
+
+    /* RESERVATION */
+    #reservation-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+
+    #mockup-phone {
+        display: none;
+    }
+
+    /* CARTE */
+
+    #carte h3 {
+        margin: 0;
+        padding: 0.4em;
+        width: 20%;
+        background-color: rgb(91,174,209);
+        color: white;
+    }
+
+    #googleMap {
+        border: 2px solid rgb(91,174,209);
+        width: 100%;
+        height: 85%;
+    }
+
+    .container {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* DETAIL STATION */
+    #details {
+        color: rgb(91,174,209);
+        border: 2px solid rgb(91,174,209);
+        position: relative;
+
+        -moz-box-shadow: 5px 5px 5px 0px #656565;
+        -webkit-box-shadow: 5px 5px 5px 0px #656565;
+        -o-box-shadow: 5px 5px 5px 0px #656565;
+        box-shadow: 5px 5px 5px 0px #656565;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #details-station i {
+        width: 5%;
+    }
+
+    #ma-super-croix {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .fa-times-circle {
+        color: red;
+        cursor: pointer;
+    }
+
+    #details-station {
+        text-transform: uppercase;
+    }
+
+    #infos-station i {
+        width: 5%;
+    }
+
+    #infos-station p {
+        color: black;
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    #infos-station h3 {
+        margin: 8px 0;
+    }
+
+    #infos-station #status-station {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    #details button {
+        border: none;
+        padding: 10px;
+        margin-top: 2em;
+        background-color:rgb(91,174,209);
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    #details button:hover {
+        border-bottom: 2px solid #3d8fd3;
+    }
+
+
+    /* TIMER RESERVATION */
+    #timer {
+        text-align: center;
+        font-weight: 800;
+        width: 80%;
+        margin: 1em auto ;
+    }
+
+    /* FOOTER / PIED DE PAGE */
+
+    footer {
+        width: 70%;
+        font-size: 25px;
+        margin: 2% auto;
+        display: block;
+        background-color: #DCDCDC;
+        text-align: center;
+        /*
+        margin-left: 18%;
+         */
+        border-radius: 5px;
+        padding-top: 5px;
+        box-shadow: 0px 5px 10px #888888;
+    }
+
+    #timercouleur {
+        color: green;
+        font-weight: 800;
+    }
+
+    #stationcouleur {
+        color: #3d8fd3;
+        font-weight: 800;
+    }
+
+    #etat-reservation {
+        font-size: 15px;
+    }
+
+}

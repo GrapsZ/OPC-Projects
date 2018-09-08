@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="V'lib, la location de vélo sans contrainte. Site de réservation de Vélo. Sélectionnez une station, réservez votre vélo. Il sera à vous pendant 20 minutes.">
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <title>V'lib : Le vélib, sereinement.</title>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Pc -->
+        <link rel="stylesheet" type="text/css" href="css/tablette.css"> <!-- Tablettes -->
+        <link rel="stylesheet" type="text/css" href="css/telephone.css"> <!-- Telephones -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.js"></script>
+
+    </head>
+
+    <body>
+
+        <!--    Menu en haut de page -->
+        <div>
+            <h1><a href="./"><span class="bleu">V</span>'lib Lyon</a></h1>
+            <h2>La location de vélo sans contrainte.</h2>
+        </div>
+
+        <!--    Mockup explicatif   -->
+        <div id="mockup">
+            <!-- Boutons contrôle Diaporama -->
+            <i id="precMockup" class="fa fa-5x fa-arrow-alt-circle-left" aria-hidden="true"></i>
+            <i id="suivMockup" class="fa fa-5x fa-arrow-alt-circle-right" aria-hidden="true"></i>
+            <div id="mockup-images">
+                <!-- Mockup en JS -->
+            </div>
+            <!-- barre animation css3 -->
+            <div id="slider-transition"></div>
+
+        </div>
+
+        <div id="mockup-phone">
+            <h3>Les étapes de la réservation d'un vélo</h3>
+            <ul style="">
+                <li>Sélectionnez une station sur la carte</li>
+                <li>Cliquez sur <span class="bleu">réserver</span></li>
+                <li>Signez votre réservation</li>
+                <li>Validez la réservation</li>
+                <li>Votre vélo est à votre disposition durant 20 minutes !</li>
+            </ul>
+        </div>
+
+        <section id="reservation-section">
+
+            <div class="container">
+                <!--    Carte de Lyon -->
+                <div id = "carte">
+                    <h3>Carte de Lyon</h3>
+                    <div id=googleMap>
+                        <!--  Carte Google Map -->
+                    </div>
+                </div>
+
+                <!--    Detail station  -->
+                <div id="details">
+                    <div id="ma-super-croix" onclick="onClickClose()"><i class="fa fa-times-circle"></i></div>
+                    <h3 id="details-station">Détails de la station</h3>
+                    <div id ="infos-station"><!--Recap station ciblée-->
+                        <h3>Nom de la station : </h3>
+                        <p id="station-name"></p>
+                        <h3>Statut de la station : </h3>
+                        <p id="status-station"></p>
+                        <h3>Adresse de la station : </h3>
+                        <p id="station-address"></p>
+                        <h3>Nombre de vélos disponibles : </h3>
+                        <p id="velo-dispo"></p>
+                        <h3>Places de vélos disponibles : </h3>
+                        <p id="places-dispo"></p>
+                    </div>
+                    <button id="reserver">Réserver</button>
+                    <div id="signature">
+                        <canvas id="canvas" height="100" width="300">
+                            Erreur avec JavaScript
+                        </canvas>
+                        <button type="submit" id="valider">Valider</button>
+                        <button id="effacer">Effacer</button>
+                    </div>
+                    <div id="erreur-signature">
+                    </div>
+                </div>
+                <!--    Detail station  Fin-->
+
+            </div>
+        </section>
+
+        <!--    Footer  -->
+        <footer id="footer">
+            <!-- image jcdecaux ? -->
+           <div id="etat-reservation">Erreur avec JavaScript</div>
+
+        </footer>
+        <!--    Footer Fin -->
+
+        <script src="./js/ajax.js"></script>
+        <script src="./js/markerclusterer.js"></script>
+        <script src="./js/settings.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <script src="./js/GoogleMap.js"></script>
+        <script src="./js/JCDecaux.js"></script>
+        <script src="./js/Signature.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/mockup.js"></script>
+        <script src="./js/main.js"></script>
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWh9C_flO4b6ZySfxoWSir6k4yCe0csho&callback=initMap">
+        </script>
+    </body>
+
+</html>
