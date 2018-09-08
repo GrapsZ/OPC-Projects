@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="WebAgency, l'agence web proche de chez vous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="images/ico/favicon.ico" />
+        <title>WebAgency : Votre agence web !</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/telephone.css" />
+        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/tablette.css" />
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/projets.js"></script>
+    </head>
+
+    <body>
+        <header id="accueil">
+            <!-- Navigation block -->
+             <nav>
+                 <div id="logo">
+                     <a href="./"><img src="images/logo.png" alt="Logo Web Agency"></a>
+                 </div>
+                 <ul class="menu">
+                     <li><a href="#">Accueil</a></li>
+                     <li><a href="#services">Services</a></li>
+                     <li><a href="#portfolio">Portfolio</a></li>
+                     <li><a href="#ma-belle-map">Contact</a></li>
+                 </ul>
+                 <div id="sm-menu">
+                     <i id="menu-hamburger" class="fas fa-align-justify" onclick="toggleMenu()"></i>
+                     <ul id="submenu-sm">
+                         <li><a href="#">Accueil</a></li>
+                         <li><a href="#services">Services</a></li>
+                         <li><a href="#portfolio">Portfolio</a></li>
+                         <li><a href="#ma-belle-map">Contact</a></li>
+                     </ul>
+                 </div>
+             </nav>
+             <!-- End Navigation -->
+        </header>
+
+        <div id="slide">
+            <div>
+                <div id="text">
+                    <h1><span id="webagency">Webagency</span> : L'agence de tous vos projets !</h1>
+                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                    <button id="infos">Plus d'infos</button>
+                </div>
+                <div id="chevron-gauche"></div>
+                <a href=""><i class="fas fa-angle-left"></i></a>
+                <div id="diaporama">
+                    <div id="diapos">
+                        <div class="diapos-img img1 mySlides"></div>
+                        <div class="diapos-img img2 mySlides"></div>
+                    </div>
+                </div>
+                <div id="chevron-droit"></div>
+                <a href=""><i class="fas fa-angle-right"></i></a>
+                <div id="slider-transition"></div>
+            </div>
+        </div>
+
+        <div id="slide-smartphone">
+            <div>
+                <div id="text-smartphone">
+                    <h1><span id="webagency-smartphone">Webagency</span> : L'agence de tous vos projets !</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services start -->
+        <section id="services">
+            <header class="maquette">
+                <h2>Nos services</h2>
+                <div class="separation">
+                    <i class="fas fa-circle"></i> <!-- Fontawesome icon -->
+                    <hr class="barre" />
+                </div>
+                <p>Notre équipe de développement est reconnue de par ses qualités techniques. Nous saurons vous accompagner dans vos projets.</p>
+            </header>
+            <div id="conteneurtest">
+                <div id="gauche"><img src="images/main-feature.png" alt="Ecran ordinateur"></div>
+                <div id="droite">
+                    <ul>
+                        <li><i class="fas fa-chart-line"></i><div class="rond"></div><h3>UX Design</h3><p>Nous sommes spécialisé en UX Design.</p></li>
+                        <li><i class="fas fa-cubes"></i><div class="rond"></div><h3>UI Design</h3><p>Nous sommes spécialisé en UI Design.</p></li>
+                        <li><i class="fas fa-chart-pie"></i><div class="rond"></div><h3>SEO</h3><p>Le référencement naturel est notre priorité.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Services end -->
+
+        <!-- Portfolio start -->
+        <section id="portfolio">
+            <header class="maquette">
+                <h2>Nos projets</h2>
+                <div class="separation">
+                    <i class="fas fa-circle"></i> <!-- Fontawesome icon -->
+                    <hr class="barre" />
+                </div>
+                <p>Découvrez nos toutes dernières réalisations. Nous mettons un point d'honneur à mettre en avant les sites de nos clients.</p>
+            </header>
+                <div id="conteneur-portfolio">
+                    <ul>
+                        <li id="all">All Works</li>
+                        <li id="creative">Creative</li>
+                        <li id="corporate">Corporate</li>
+                        <li id="portofolio">Portfolio</li>
+                    </ul>
+                </div>
+            <div id="conteneur-portfolio-images">
+                <div class="test creative active">
+                    <img src="images/portfolio/01.jpg" alt="image 01">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 1</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test portofolio active">
+                    <img src="images/portfolio/02.jpg" alt="image 02">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 2</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test creative active">
+                    <img src="images/portfolio/03.jpg" alt="image 03">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 3</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test corporate active">
+                    <img src="images/portfolio/04.jpg" alt="image 04">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 4</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test corporate active">
+                    <img src="images/portfolio/05.jpg" alt="image 05">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 5</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test creative active">
+                    <img src="images/portfolio/06.jpg" alt="image 06">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 6</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test portofolio active">
+                    <img src="images/portfolio/07.jpg" alt="image 07">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 7</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+                <div class="test corporate active">
+                    <img src="images/portfolio/08.jpg" alt="image 08">
+                    <div class="p-portfolio">
+                        <a href="#"><i class="far fa-eye"></i></a>
+                        <h3>Portfolio item 8</h3>
+                        <p>Mon texte est ici</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio stop -->
+
+        <footer>
+            <div id="ma-belle-map">
+                <!--<img src="images/map/google-map.jpg" alt="Google Map"> -->
+                <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2214246080484!2d2.3476369158697263!3d48.873055307627695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1533557877283" style="width:100%; border:0;" height="600" allowfullscreen></iframe>
+                <div id="contact-form">
+                    <h2>Contact Info</h2>
+                    <h3>WebAgency SAS</h3>
+                    <p>25 rue d'Hauteville, 75010 Paris</p>
+                    <p id="p-tel"><span id="tel">Tel :</span> 01.XX.XX.XX.XX</p>
+                    <form>
+                        <!--<label></label>-->
+                        <input class="formulaire" type="text" name="firstname" placeholder="Votre nom">
+                        <input class="formulaire" type="text" name="mail" placeholder="Email">
+                        <input class="formulaire" type="text" name="subject" placeholder="Sujet">
+                        <textarea class="formulaire" placeholder="Message" id="message-form"></textarea>
+                        <p style="margin: 0" id="lengthMessage"></p>
+                        <input type="submit" id="contact-bouton" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
