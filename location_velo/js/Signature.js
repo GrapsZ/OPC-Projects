@@ -12,7 +12,7 @@ class Signature
             dispo: station.available_bikes,
             temps: null
         };
-        console.log(resultInfos);
+
         if (this.isReservationExist()) {
             if (resultInfos.temps !== null) {
                 sessionStorage.clear();
@@ -20,7 +20,6 @@ class Signature
                 document.getElementById('erreur-signature').style.display = "block"; // affiche erreur
                 document.getElementById("erreur-signature").innerHTML = "Une seule réservation à la fois. Veuillez effectuer une réservation à nouveau.";
             } else {
-                console.log('on peut continuer à chercher un beau et grand vélo');
                 this.setStationReservedInformation(infos);
             }
         } else {
@@ -37,8 +36,6 @@ class Signature
     }
 
     setStationReservedInformation(infos) {
-        console.log('writeit');
-        console.log(infos);
         sessionStorage.setItem('station_info', JSON.stringify(infos));
     }
 

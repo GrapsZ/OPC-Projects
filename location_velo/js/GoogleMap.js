@@ -2,6 +2,7 @@ class GoogleMap
 {
     constructor() {
         this.city = new google.maps.LatLng(45.764047, 4.875810);
+
     }
 
     initializeMap() {
@@ -23,10 +24,18 @@ class GoogleMap
             const longitude = station.position.lng;
             const latLng = new google.maps.LatLng(latitude, longitude);
             const iconBase = './images/';
+            let icon = '';
+            if (station.available_bikes > 0 && station.status === "OPEN") {
+            	icon = iconBase + 'stationVerte.png';
+            } else if (station.available_bikes === 0 && station.status === "OPEN") {
+            	icon = iconBase + 'stationOrange.png';
+            } else {
+            	icon = iconBase + 'stationRouge.png';
+            }
             const marker = new google.maps.Marker({
                 position: latLng,
                 map: map,
-                icon: iconBase + 'stationOuverte.png',
+                icon: icon,
                 size: new google.maps.Size(41, 54),
                 //fin methode
             });
@@ -44,11 +53,16 @@ class GoogleMap
         const _this = this;
         marker.addListener('click', function () {
             document.getElementById('details').style.display = "block";
-            console.log('clique sur le marqueur station :', station.name);
+            // Suppression des messages d'alertes
+            document.getElementById('erreur-signature').style.display = "none";
+            // Suppression signature
+            var signatureCanvas = document.getElementById("signature").querySelector("canvas");
+            var signaturePad = new SignaturePad(signatureCanvas);
+            signaturePad.clear();
             // méthode afficher info marker
             var stationName = document.getElementById('station-name');
             stationName.innerText = station.name;
-            console.log('nom station :', station.name);
+
             _this.setStationStatus(station.status);
             _this.setStationInfos(station);
             const signature = new Signature();
@@ -70,11 +84,9 @@ class GoogleMap
     setStationInfos(station) {
         const stationAddress = document.getElementById('station-address');
         stationAddress.innerHTML = '<i class="fa fa-map" aria-hidden="true"></i>' + station.address;
-        //console.log('Adresse', station.address);
 
         const stationAvailablesBikes = document.getElementById('velo-dispo');
         stationAvailablesBikes.innerHTML = '<i class="fa fa-bicycle" aria-hidden="true"></i>' + station.available_bikes;
-        //console.log('Velos dispo', station.available_bikes);
 
         const stationAvailablesStands = document.getElementById('places-dispo');
         stationAvailablesStands.innerHTML = '<i class="fa fa-info" aria-hidden="true"></i>' + station.available_bike_stands;

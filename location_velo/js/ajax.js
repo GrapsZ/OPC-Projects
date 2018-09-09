@@ -8,7 +8,7 @@ function ajaxGet(url, callback) {
             // Appelle la fonction callback en lui passant la réponse de la requête
             callback(req.responseText);
         } else {
-            console.errsor(req.status + " " + req.statusText + " " + url);
+            console.error(req.status + " " + req.statusText + " " + url);
         }
     });
     req.addEventListener("error", function () {

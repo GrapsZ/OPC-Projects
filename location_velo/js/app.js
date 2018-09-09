@@ -31,7 +31,6 @@ function initMap() {
     const google = new GoogleMap();
 
     //var stations = jcDecaux.getStationsByContract();
-    //console.log(stations);
     ajaxGet("https://api.jcdecaux.com/vls/v1/stations?contract=" + ville + "&apiKey=56b77c204faa8c1947186ef3e80af8c817f4cc72", function(response) {
         const map = google.initializeMap();
         google.addMarkers(response, map);
@@ -99,16 +98,13 @@ $("#valider").click(function (e) {
     // La station est ouverte
     if (resultInfos.status === "OPEN" && resultInfos.status !== null) {
         if (signaturePad.isEmpty()) {
-            console.log('empty');
             // SIGNATURE VIDE = AFFICHAGE DU BLOCK
             document.getElementById('erreur-signature').style.display = "block";
             // ERREUR DE SIGNATURE
             document.getElementById("erreur-signature").innerHTML = "Vous devez signer le formulaire afin de valider la réservation.";
         } else {
-            console.log('else');
             // VELOS DANS LA STATION
             if (resultInfos.dispo > 0) {
-                console.log('res');
 
                 //MAJ DU TEMPS DE RESERVATION + DES DISPOS VELOS - 1
                 resultInfos.temps = temps_reservation;
@@ -118,14 +114,12 @@ $("#valider").click(function (e) {
                 document.getElementById('details').style.display = "none";
                 signaturePad.clear();
             } else {
-                console.log('nocycle');
                 // PAS DE VELO DANS LA STATION
                 document.getElementById('erreur-signature').style.display = "block"; // affiche erreur
                 document.getElementById("erreur-signature").innerHTML = "Il n'y a aucun vélo disponible dans cette station !";
             }
         }
     } else {
-        console.log('closed');
         // STATION FERMEE
         document.getElementById('erreur-signature').style.display = "block"; // affiche erreur
         document.getElementById("erreur-signature").innerHTML = "Nous sommes désolés mais cette station est fermée !";

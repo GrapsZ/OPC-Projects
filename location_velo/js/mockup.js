@@ -14,9 +14,9 @@ const Mockup = {
         mockupDiv.html(`${this.texteMockup}`);
     },
     
-    // Change l'index, puis apelle initDiapo pour attribuer les nouvelles valeurs
+    // Change l'index, puis apelle initMockup pour attribuer les nouvelles valeurs
     slideSuivant: function () {
-        mockupSection.animate({opacity: 0}, 1000, function () {
+        mockupSection.animate({opacity: 0}, 500, function () {
             if (i >= listeMockups.length - 1) {
                 i = 0;
                 Mockup.initMockup(i);
@@ -24,11 +24,11 @@ const Mockup = {
                 i +=1;
                 Mockup.initMockup(i);
             };
-            mockupSection.animate({opacity: 1}, 1000);
+            mockupSection.animate({opacity: 1}, 500);
         })
     },
     slidePrecedent: function () {
-        mockupSection.animate({opacity: 0}, 1000, function () {
+        mockupSection.animate({opacity: 0}, 500, function () {
         if (i <= 0) {
                 i = listeMockups.length - 1;
                 Mockup.initMockup(i);
@@ -36,7 +36,7 @@ const Mockup = {
                 i -= 1;
                 Mockup.initMockup(i);
             };
-            mockupSection.animate({opacity: 1}, 1000);
+            mockupSection.animate({opacity: 1}, 500);
         });
     }
 };
